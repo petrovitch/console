@@ -1,0 +1,37 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "7922cb3924423ca65462d6baa55ad184",
+    "content-hash": "846dd0c94a7aa604962a4f345d26e058",
+    "packages": [
+        {
+            "name": "petrovitch/console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/petrovitch/console.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Petrovitch\\Console": "src"
+                }
+            },
+            "time": "2015-11-22 16:30:29"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "petrovitch/console": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

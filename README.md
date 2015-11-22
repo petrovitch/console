@@ -2,7 +2,10 @@
 ## Installation
 ```
 // Copy Console directory to new project
-cp -pr Console /{{project}}/app/
+cd app/Console/Commands
+cp -pr * /{{project}}/app/Console/Commands/
+
+// Include RegisterCommands in the Kernel
 
 // Rebuild Kernel with all commands in Console/Commands
 php artisan register:commands

@@ -6,5 +6,26 @@
             "email": "kennthompson@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "petrovitch/console": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "petrovitch/console",
+                "version": "dev-master",
+                "source": {
+                    "url": "git://github.com/petrovitch/console.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0" : {
+                        "Petrovitch\\Console" : "src"
+                    }
+                }
+            }
+        }
+    ]
 }
