@@ -1,0 +1,6 @@
+    public function test{{name}}()
+    {
+        \$this->visit('{{home}}')
+            ->click('{{label}}')
+            ->seePageIs('{{link}}');
+    }

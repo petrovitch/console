@@ -1,0 +1,62 @@
+<?php
+namespace App\Http\Controllers;
+
+use {{use_path}}{{model_singular}};
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+
+class {{model_plural}}Controller extends ApiController
+{
+    protected $records;
+
+    public function __construct({{model_singular}} $records)
+    {
+        $this->records = $records;
+        $this->related = [];
+    }
+
+    public function index()
+    {
+        // show all
+        $records = Use{{model_singular}}r::with($this->related)->get();
+        return $records;
+    }
+
+    public function destroy($id)
+    {
+        // delete single
+        $record = $this->records->findOrFail($id);
+        $record->delete();
+        return $this->respondOK('{{model_singular}} was deleted');
+    }
+
+    public function show($id)
+    {
+        //show single
+        $record = {{model_singular}}::with($this->related)->findOrFail($id);
+        return $record;
+    }
+
+    public function store()
+    {
+        // insert new
+        $record = {{model_singular}}::create(Input::all());
+        return $this->respond($record->id);
+    }
+
+    public function update($id)
+    {
+        // save updated
+        $record = $this->records->find($id);
+
+        if(! $record){
+            {{model_singular}}::create(Input::all());
+            return $this->respond($record);
+        }
+
+        $record->fill(Input::all())->save();
+        return $this->respond($record);
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "root/console",
+    "authors": [
+        {
+            "name": "petrovitch",
+            "email": "kennthompson@gmail.com"
+        }
+    ],
+    "require": {}
+}
