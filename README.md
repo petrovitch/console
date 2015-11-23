@@ -29,14 +29,6 @@ php artisan zulu:make-controller {model}
 php artisan zulu:update-seeder
 ```
 
-* MigrateMysqlSchemaCommand.php
-```
-// @author Jim Pringle <pringlized@gmail.com>
-// credits to @Christopher Pitt, @michaeljcalkins and Lee Zhen Yong whom this was forked from
-// Reverse migrations from database
-php artisan migrate:schema-mysql {database}
-```
-
 * Migrations.php
 ```
 php artisan zulu:show-migrations {--write}
