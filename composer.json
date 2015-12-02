@@ -1,31 +1,24 @@
 {
-    "name": "root/console",
-    "authors": [
-        {
-            "name": "petrovitch",
-            "email": "kennthompson@gmail.com"
-        }
-    ],
-    "require": {
-        "petrovitch/console": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "petrovitch/console",
-                "version": "dev-master",
-                "source": {
-                    "url": "git://github.com/petrovitch/console.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-0" : {
-                        "Petrovitch\\Console" : "src"
-                    }
-                }
-            }
-        }
-    ]
+  "name": "root/console",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "petrovitch",
+      "email": "kennthompson@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://github.com/petrovitch/console"
+    }
+  ],
+  "require": {
+    "petrovitch/console": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "Petrovitch\\Console": "src"
+    }
+  }
 }

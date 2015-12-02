@@ -11,7 +11,7 @@ class DatabaseSeeder extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:update-seeder';
+    protected $signature = 'zulu:refactor-database-seeder';
 
     /**
      * The console command description.

@@ -10,7 +10,7 @@ class Comments extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:remove-comments {file} {--double-slash} {--single} {--block}';
+    protected $signature = 'zulu:remove-comments {file} {--double-slash} {--single} {--block} {--purge}';
 
     /**
      * The console command description.
@@ -79,6 +79,16 @@ class Comments extends Command
             if ($this->option('block')) {
                 if (preg_match('/\/\*\*.*?\*\//s', $contents, $match)) {
                     $contents = preg_replace('/\/\*\*.*?\*\/\s+/s', '', $contents);
+                    $changes = true;
+                }
+            }
+
+            /**
+             * Remove multiple blank lines
+             */
+            if ($this->option('purge')) {
+                while (preg_match("/\n\n\n/s", $contents, $match)) {
+                    $contents = preg_replace("/(\n\n\n)+/s", "\n\n", $contents);
                     $changes = true;
                 }
             }

@@ -12,7 +12,7 @@ class RegisterCommands extends Command
      *
      * @var string
      */
-    protected $signature = 'register:commands';
+    protected $signature = 'zulu:register-commands';
 
     /**
      * The console command description.

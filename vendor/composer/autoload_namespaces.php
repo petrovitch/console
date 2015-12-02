@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Petrovitch\\Console' => array($vendorDir . '/petrovitch/console/src'),
+    'Petrovitch\\Console' => array($baseDir . '/src', $vendorDir . '/petrovitch/console/src'),
 );

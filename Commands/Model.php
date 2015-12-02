@@ -72,11 +72,14 @@ class Model extends Command
 
         // {-m} Migration
         if ($this->option('m')){
-            $s = file_get_contents('app/Console/Commands/stubs/Schema.stub');
+            $s = file_get_contents('app/Console/Commands/stubs/Migration.stub');
             $s = $this->replace($s, $model);
-            $output = "database/migrations/" . date('Y_m_d_his') . "_create_" . str_plural($model) . 'table.php';
+            $output = "database/migrations/" . date('Y_m_d_his') . "_create_" . str_to_lower(str_plural($model)) . '_table.php';
             file_put_contents($output, $s);
             $this->line($s);
+
+            // Create new table
+            $this->call('migrate:refresh --seed');
         }
 
         // {-s} Seeder
@@ -85,6 +88,9 @@ class Model extends Command
             $s = $this->replace($s, $model);
             $output = "database/seeds/" . str_plural($model) . 'TableSeeder.php';
             file_put_contents($output, $s);
+
+            // Add seeder to DatabaseSeeder
+            $this->call('zulu:refactor-database-seeder');
         }
     }
 }
