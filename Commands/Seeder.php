@@ -3,6 +3,11 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+/**
+ * Class Seeder
+ * @package App\Console\Commands
+ * @deprecated replaced by Model.php
+ */
 class Seeder extends Command
 {
     /**
@@ -10,7 +15,8 @@ class Seeder extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:make-seeder {model}';
+    protected $signature = 'zulu:make-seeder
+                            {model : (required) Model name}';
 
     /**
      * The console command description.

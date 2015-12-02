@@ -4,6 +4,11 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+/**
+ * Class PhpUnits
+ * @package App\Console\Commands
+ * @deprecated (under construction)
+ */
 class PhpUnits extends Command
 {
     /**

@@ -11,7 +11,8 @@ class Migrations extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:show-migrations {--write}';
+    protected $signature = 'zulu:show-migrations
+                            {--write : Output migrations to text file (alternative bash > output)}';
 
     /**
      * The console command description.

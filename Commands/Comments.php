@@ -10,7 +10,12 @@ class Comments extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:remove-comments {file} {--double-slash} {--single} {--block} {--purge}';
+    protected $signature = 'zulu:remove-comments
+                            {file : (required) File from which you wish to remove comments}
+                            {--double-slash : Remove double slashed comments //}
+                            {--single : Remove single line comments, /* */}
+                            {--block : Remove multi-line comments /** */}
+                            {--purge : Remove multiple blank lines (allow singles)}';
 
     /**
      * The console command description.

@@ -10,7 +10,9 @@ class RefactorModel extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:refactor-models {--fill} {--cast}';
+    protected $signature = 'zulu:refactor-models
+                            {--fill : Fillables}
+                            {--cast : Casts}';
 
     /**
      * The console command description.

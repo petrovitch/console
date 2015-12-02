@@ -36,10 +36,15 @@ class Versions extends Command
      */
     public function versions()
     {
+        // Laravel
         $laravel = app();
         $version = $laravel::VERSION;
         $this->info('Laravel Version ' . $version);
+
+        // PHP
         $this->info('PHP Version ' . PHP_VERSION);
+
+        // MySQL
         $mysql = DB::select("SHOW VARIABLES LIKE '%version%'");
         $this->info('MySQL');
         for ($i = 0; $i < sizeof($mysql); $i++) {

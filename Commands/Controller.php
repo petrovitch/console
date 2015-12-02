@@ -3,6 +3,11 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+/**
+ * Class Controller
+ * @package App\Console\Commands
+ * @deprecated replaced by Model.php
+ */
 class Controller extends Command
 {
     /**

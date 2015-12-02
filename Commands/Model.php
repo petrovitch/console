@@ -11,7 +11,11 @@ class Model extends Command
      *
      * @var string
      */
-    protected $signature = 'zulu:make-model {model} {--c} {--m} {--s}';
+    protected $signature = 'zulu:make-model
+                            {model : (required) Model name}
+                            {--c : Controller}
+                            {--m : Migration}
+                            {--s : Seeder}';
 
     /**
      * The console command description.
